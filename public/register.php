@@ -1,5 +1,17 @@
-<div class="container">
-        <h2>Créer un compte sur Find My Dream Home</h2>
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="assets/css/register.css">
+                <title>register</title>
+            </head>
+            <body>
+                 <?php require_once __DIR__ . '/../app/views/partials/header.php'; ?>
+      <div class="container">
+                    <div class="container-items">
+                           <h2>Créer un compte sur Find My Dream Home</h2>
         <form method="POST" action="#">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required>
@@ -16,3 +28,8 @@
             <p>Déjà inscrit ? <a href="login.php">Connectez-vous</a></p>
         </div>
     </div>
+
+    </div>
+        <?php require_once __DIR__ . '/../app/views/partials/footer.php'; ?>
+            </body>
+            </html>
