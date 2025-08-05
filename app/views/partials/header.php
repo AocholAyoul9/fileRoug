@@ -13,6 +13,7 @@
         <li><a href="login.php">Login</a></li>
         <li><a href="#">House</a></li>
         <li><a href="#">Appartement</a></li>
+        <div class="add-btn"><a href="addanoncement.php">Add +</a></div>
     </ul>
 </nav>
 </body>

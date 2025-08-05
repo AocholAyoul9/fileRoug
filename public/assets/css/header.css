@@ -31,3 +31,11 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+
+.add-btn a{
+  color: white;
+  background-color: green;
+  padding: 10px 20px;
+  border-radius: 6px;
+text-decoration: none;
+}
