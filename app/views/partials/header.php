@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-    <h1>Find My Dream Home</h1>
+    <h1><a href="/">Find My Dream Home</a></h1>
     <ul>
         <li><a href="login.php">Login</a></li>
         <li><a href="#">House</a></li>
