@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Find My Dream Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<nav>
-    <h1>Find My Dream Home</h1>
-    <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">House</a></li>
-        <li><a href="#">Appartement</a></li>
-    </ul>
-</nav>
+ <?php
+ require_once __DIR__ . '/../app/views/partials/header.php'; ?>
 
 <div class="content">
 
@@ -46,10 +39,10 @@
             <div class="annonce">
                 <img src="<?php echo $appartement['image'] ?>">
                 <h3><?php echo $appartement['titre'] ?></h3>
-                <p> Prix :                                                     <?php echo $appartement['prix'] ?></p>
-                <p>Ville :                                                     <?php echo $appartement['ville'] ?></p>
+                <p> Prix :                                                                                                         <?php echo $appartement['prix'] ?></p>
+                <p>Ville :                                                                                                         <?php echo $appartement['ville'] ?></p>
                 <p><?php echo $appartement['description'] ?></p>
-                <p> Type :                                                      <?php echo $appartement['type'] ?></p>
+                <p> Type :                                                                                                          <?php echo $appartement['type'] ?></p>
                 <a class="contact-btn" href="#">Contact</a>
             </div>
         <?php endforeach; ?>
@@ -59,7 +52,8 @@
 </div>
 
 <footer>
-    © 2025 Find My Dream Home – Tous droits réservés.
+    <?php
+    require_once __DIR__ . '/../app/views/partials/footer.php'; ?>
 </footer>
 
 </body>
