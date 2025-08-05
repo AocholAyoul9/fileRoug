@@ -10,8 +10,8 @@
 <body>
     <?php
     require_once __DIR__ . '/../app/views/partials/header.php'; ?>
-    <div class="container">
-        <div class="contianer-items">
+<div class="container">
+    <div class="contianer-items">
          <h2>Connexion à Find My Dream Home</h2>
          <form method="POST">
             <label for="email">Email</label>
