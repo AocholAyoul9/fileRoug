@@ -11,9 +11,10 @@
     <nav>
     <h1><a href="/">Find My Dream Home</a></h1>
     <ul>
-             <li><a href="#">House</a></li>
+    <li><a href="#">House</a></li>
         <li><a href="#">Appartement</a></li>
      <?php if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['email'])): ?>
+    <p>Bienvenue,<?php echo htmlspecialchars($_SESSION['user']['email']); ?> !</p>
     <a href="logout.php">Logout</a>
     <div class="add-btn"><a href="addanoncement.php">Add +</a></div>
     <?php else: ?>
