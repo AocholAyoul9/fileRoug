@@ -1,18 +1,24 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/login.css">
 
     <title>login</title>
-</head>
-<body>
+ </head>
+ <body>
     <?php
     require_once __DIR__ . '/../app/views/partials/header.php'; ?>
-<div class="container">
+ <div class="container">
     <div class="contianer-items">
          <h2>Connexion à Find My Dream Home</h2>
+
+         <?php if(!empty($error)): ?>
+            <p style="color: red"><?= $error ?></p>
+         <?php endif; ?>
          <form method="POST" id="loginForm">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" >
