@@ -10,17 +10,24 @@
             <body>
                  <?php require_once __DIR__ . '/../app/views/partials/header.php'; ?>
       <div class="container">
-                    <div class="container-items">
-                           <h2>Créer un compte sur Find My Dream Home</h2>
-        <form method="POST" action="#">
+        <div class="container-items">
+          <h2>Créer un compte sur Find My Dream Home</h2>
+
+        <?php if (! empty($error)): ?>
+            <p style="color: red"><?php echo $error ?></p>
+        <?php endif; ?>
+
+        <form method="POST" action="#" id="loginForm">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email">
+             <small id="errorMessage"></small>
 
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password">
+            <small id="passwordStrength"></small>
 
             <label for="confirm_password">Confirmation du mot de passe</label>
-            <input type="password" name="confirm_password" id="confirm_password" required>
+            <input type="password" name="confirm_password" id="confirm_password">
 
             <button type="submit">S’inscrire</button>
         </form>
@@ -31,5 +38,70 @@
 
     </div>
         <?php require_once __DIR__ . '/../app/views/partials/footer.php'; ?>
-            </body>
-            </html>
+
+
+
+<script>
+
+  const passwordInput = document.getElementById('password');
+  const strengthText = document.getElementById('passwordStrength');
+  const errorMessage = document.getElementById('errorMessage');
+  const confirm_password = document.getElementById('confirm_password');
+
+  passwordInput.addEventListener('input', () => {
+    const value = passwordInput.value;
+
+    if (value.length === 0) {
+      strengthText.textContent = '';
+    } else if (value.length > 8 && /[A-Z]/.test(value) && /[0-9]/.test(value)) {
+      strengthText.textContent = 'Strong';
+      strengthText.style.color = 'green';
+    } else if (value.length >= 6) {
+      strengthText.textContent = 'Medium';
+      strengthText.style.color = 'orange';
+    } else {
+      strengthText.textContent = 'Weak';
+      strengthText.style.color = 'red';
+    }
+  });
+
+      document.getElementById('loginForm').addEventListener('submit',(e)=>{
+
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+       const confirm_password = document.getElementById('confirm_password').value.trim();
+
+        let  errorMessage = document.getElementById('errorMessage');
+
+
+        errorMessage.textContent = '';
+
+        if(!email)
+      {
+        errorMessage.textContent = "Email is required";
+        errorMessage.style.color = 'red';
+
+        return;
+      }
+          if(!password)
+      {
+        strengthText.textContent = "Password is required";
+        strengthText.style.color = 'red';
+
+        return;
+      }
+
+
+      if(password !== confirm_password )
+      {
+            strengthText.textContent = "password do not match";
+            strengthText.style.color = 'red';
+
+        return;
+      }
+       e.target.submit()
+      })
+</script>
+</body>
+</html>

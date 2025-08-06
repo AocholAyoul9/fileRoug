@@ -4,14 +4,18 @@ body {
   justify-content: center;
   flex-direction: column;
   background: #f0f2f5;
+  height: 100vh;
 }
+
 main {
-  margin-top: 80px;
-  max-width: 600px;
+  min-height: 100vh;
+}
+.container {
+  margin-top: 8rem;
+  max-width: 700px;
   background-color: white;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-bottom: 3rem;
 }
 
 form {
@@ -24,7 +28,7 @@ form {
 }
 
 label {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -34,6 +38,7 @@ textarea {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+  border-radius: 6px;
 }
 
 button {
@@ -42,21 +47,16 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 6px;
 }
 
-.confirmation {
-  margin-top: 20px;
-  color: green;
-  font-weight: bold;
-}
-
-a.return {
+.return {
   display: inline-block;
   margin-top: 20px;
-  color: #007bff;
+  color: blue;
   text-decoration: none;
 }
 
-a.return:hover {
+.return:hover {
   text-decoration: underline;
 }
