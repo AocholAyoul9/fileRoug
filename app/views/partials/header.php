@@ -1,3 +1,4 @@
+<?php include 'init.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,15 @@
     <nav>
     <h1><a href="/">Find My Dream Home</a></h1>
     <ul>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="#">House</a></li>
+             <li><a href="#">House</a></li>
         <li><a href="#">Appartement</a></li>
-        <div class="add-btn"><a href="addanoncement.php">Add +</a></div>
+     <?php if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['email'])): ?>
+    <a href="logout.php">Logout</a>
+    <div class="add-btn"><a href="addanoncement.php">Add +</a></div>
+    <?php else: ?>
+    <a href="login.php">Login</a>
+    <?php endif; ?>
+
     </ul>
 </nav>
 </body>

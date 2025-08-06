@@ -1,4 +1,24 @@
 
+<?php
+
+    include 'init.php';
+
+   
+
+    if ($_SERVER['REQUEST_METHOD'] === "POST") {
+        $email    = trim($_POST['email']);
+        $password = trim($_POST['password']);
+
+        if ($email === "shawil@gmail.com" && $password === "Aochol12!") {
+            $_SESSION['user']   = ['email' => $email];;
+            $_SESSION['isLoggedIn'] = true;
+            header('Location: index.php');
+            exit();
+        } else {
+            $error = "Identifiants incorrects";
+        }
+    }
+?>
 
 <!DOCTYPE html>
  <html lang="en">
@@ -16,9 +36,10 @@
     <div class="contianer-items">
          <h2>Connexion à Find My Dream Home</h2>
 
-         <?php if(!empty($error)): ?>
-            <p style="color: red"><?= $error ?></p>
-         <?php endif; ?>
+       <?php if (isset($error)): ?>
+      <p style="color:red"><?php echo htmlspecialchars($error)?></p>
+       <?php endif; ?>
+
          <form method="POST" id="loginForm">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" >
