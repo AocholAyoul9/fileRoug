@@ -46,15 +46,60 @@
         .annonce p {
             margin: 5px 0;
         }
+.action-buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
 
-        .contact-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 12px;
-            background-color: blue;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
 
-     
+a.contact-btn, 
+.btn-delete,
+a.edit-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 4px 4px 0 0;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a.contact-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+a.contact-btn:hover {
+    background-color: #2980b9;
+}
+
+a.edit-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+a.edit-btn:hover {
+    background-color: #d68910;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.btn-delete {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #27ae60;
+}
+

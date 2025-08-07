@@ -7,9 +7,7 @@ body {
   height: 100vh;
 }
 
-main {
-  min-height: 100vh;
-}
+
 .container {
   margin-top: 8rem;
   max-width: 700px;
