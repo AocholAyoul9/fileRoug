@@ -1,0 +1,77 @@
+.favorites-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.favorites-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.fav-annonce {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.fav-annonce img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.fav-details {
+    flex: 1;
+}
+
+.fav-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #0077cc;
+}
+
+.fav-details p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.fav-actions {
+    margin-top: 15px;
+}
+
+.fav-actions form {
+    display: inline;
+}
+
+.fav-actions button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.fav-actions button:hover {
+    background-color: #c0392b;
+}
+
+.no-favorites {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    margin-top: 50px;
+}
